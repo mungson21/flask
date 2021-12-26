@@ -1,0 +1,47 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    border: 2px solid black;
+    margin: 0 auto;
+    padding: 21px;
+    padding-bottom: 0px;
+    width: 362px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+textarea {
+    width: 359px;
+    margin-bottom: 14px;
+}
+
+#button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    background-color: cadetblue;
+    color: white;
+    padding: 3px;
+    width: 58px;
+    box-shadow: 2px 2px black;
+}
+
+#goback {
+    width: 80px;
+}
