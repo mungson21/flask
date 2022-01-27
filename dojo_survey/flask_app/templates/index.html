@@ -9,24 +9,31 @@
 </head>
 <body>
     <form action="/process" method='POST' class="form" >
-        <p><label for="">Your Name:</label>
-            <input type="text" name="user_name"></p>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <p><label for="name">Your Name:</label>
+            <input type="text" name="name"></p>
 
         <p><label for="">Dojo Location:</label>
-        <select name="dojo_location">
+        <select name="location">
             <option value="Burbank, CA">Burbank, CA</option>
             <option value="Chicago, IL">Chicago, IL</option>
             <option value="Online">Online</option>
         </select></p>
 
         <p><label for="">Favorite Language:</label>
-        <select name="fav_language">
+        <select name="language">
             <option value="Python">Python</option>
             <option value="Javascript">Javascript</option>
             <option value="Html">HTML</option>
         </select></p>
 
-        <p><label for="">Comment (optional):</label></p>
+        <p><label for="comment">Comment (optional):</label></p>
         <textarea name="comment" cols="45" rows="5"></textarea>
 
         <p id="button" ><button>Button</button></p>
